@@ -1,0 +1,50 @@
+{
+    "query": "John adopts a dog.  He takes the dog to the groomer, which costs $100.  The groomer offers him a 30% discount for being a new customer.  How much does the grooming cost?",
+    "ground_truth": "The groomer gave a 100*.3=$<<100*.3=30>>30 discount\nSo the grooming cost 100-30=$<<100-30=70>>70\n#### 70",
+    "hints_list": [],
+    "answers_list": [
+        "[reasoning process] To find the cost of the grooming after the discount, we first need to calculate the amount of the discount. The original grooming cost is $100. The groomer offers a 30% discount, so we can calculate the discount amount by multiplying the original cost by the discount percentage:\n\nDiscount Amount = Original Cost × Discount Percentage  \n= $100 × 0.30  \n= $30.\n\nNext, we subtract the discount amount from the original cost to find the final cost after the discount:\n\nFinal Cost = Original Cost - Discount Amount  \n= $100 - $30  \n= $70.\n\n[Verification] We can verify our calculations by checking both the discount and final cost. The discount calculated was $30, which is indeed 30% of $100. Thus, subtracting this from $100 gives us $70, confirming that the calculations are correct.\n\n[Final Answer] The answer is $70  \n#### $70",
+        "I don't know the answer to this question."
+    ],
+    "ground_truth_hints": "",
+    "hints_prompt": "Question: John adopts a dog.  He takes the dog to the groomer, which costs $100.  The groomer offers him a 30% discount for being a new customer.  How much does the grooming cost?\nCould you provide me with the thought process to solve this problem, but please don’t give me the answer or calculation, just the thought process?",
+    "to_explore": [
+        "[reasoning process] To find the cost of the grooming after the discount, we first need to calculate the amount of the discount. The original grooming cost is $100. The groomer offers a 30% discount, so we can calculate the discount amount by multiplying the original cost by the discount percentage:\n\nDiscount Amount = Original Cost × Discount Percentage  \n= $100 × 0.30  \n= $30.\n\nNext, we subtract the discount amount from the original cost to find the final cost after the discount:\n\nFinal Cost = Original Cost - Discount Amount  \n= $100 - $30  \n= $70.\n\n[Verification] We can verify our calculations by checking both the discount and final cost. The discount calculated was $30, which is indeed 30% of $100. Thus, subtracting this from $100 gives us $70, confirming that the calculations are correct.\n\n[Final Answer] The answer is $70  \n#### $70",
+        "I don't know the answer to this question."
+    ],
+    "to_explore_reward": {
+        "[reasoning process] To find the cost of the grooming after the discount, we first need to calculate the amount of the discount. The original grooming cost is $100. The groomer offers a 30% discount, so we can calculate the discount amount by multiplying the original cost by the discount percentage:\n\nDiscount Amount = Original Cost × Discount Percentage  \n= $100 × 0.30  \n= $30.\n\nNext, we subtract the discount amount from the original cost to find the final cost after the discount:\n\nFinal Cost = Original Cost - Discount Amount  \n= $100 - $30  \n= $70.\n\n[Verification] We can verify our calculations by checking both the discount and final cost. The discount calculated was $30, which is indeed 30% of $100. Thus, subtracting this from $100 gives us $70, confirming that the calculations are correct.\n\n[Final Answer] The answer is $70  \n#### $70": [
+            85.0
+        ],
+        "I don't know the answer to this question.": [
+            -90.0
+        ]
+    },
+    "hints_bank": {},
+    "history_bank": {
+        "[reasoning process] To find the cost of the grooming after the discount, we first need to calculate the amount of the discount. The original grooming cost is $100. The groomer offers a 30% discount, so we can calculate the discount amount by multiplying the original cost by the discount percentage:\n\nDiscount Amount = Original Cost × Discount Percentage  \n= $100 × 0.30  \n= $30.\n\nNext, we subtract the discount amount from the original cost to find the final cost after the discount:\n\nFinal Cost = Original Cost - Discount Amount  \n= $100 - $30  \n= $70.\n\n[Verification] We can verify our calculations by checking both the discount and final cost. The discount calculated was $30, which is indeed 30% of $100. Thus, subtracting this from $100 gives us $70, confirming that the calculations are correct.\n\n[Final Answer] The answer is $70  \n#### $70": [
+            "Question: John adopts a dog.  He takes the dog to the groomer, which costs $100.  The groomer offers him a 30% discount for being a new customer.  How much does the grooming cost?\nThe response should begin with [reasoning process]...[Verification]... and end with \"[Final Answer] The answer is [answer] \\n#### [answer]\"\nLet's think step by step.",
+            "[reasoning process] To find the cost of the grooming after the discount, we first need to calculate the amount of the discount. The original grooming cost is $100. The groomer offers a 30% discount, so we can calculate the discount amount by multiplying the original cost by the discount percentage:\n\nDiscount Amount = Original Cost × Discount Percentage  \n= $100 × 0.30  \n= $30.\n\nNext, we subtract the discount amount from the original cost to find the final cost after the discount:\n\nFinal Cost = Original Cost - Discount Amount  \n= $100 - $30  \n= $70.\n\n[Verification] We can verify our calculations by checking both the discount and final cost. The discount calculated was $30, which is indeed 30% of $100. Thus, subtracting this from $100 gives us $70, confirming that the calculations are correct.\n\n[Final Answer] The answer is $70  \n#### $70"
+        ],
+        "I don't know the answer to this question.": [
+            "Question: John adopts a dog.  He takes the dog to the groomer, which costs $100.  The groomer offers him a 30% discount for being a new customer.  How much does the grooming cost?\nThe response should begin with [reasoning process]...[Verification]... and end with \"[Final Answer] The answer is [answer] \\n#### [answer]\"\nLet's think step by step.",
+            "I don't know the answer to this question."
+        ]
+    },
+    "hints_reward_imp_bank": {},
+    "fathers": {
+        "[reasoning process] To find the cost of the grooming after the discount, we first need to calculate the amount of the discount. The original grooming cost is $100. The groomer offers a 30% discount, so we can calculate the discount amount by multiplying the original cost by the discount percentage:\n\nDiscount Amount = Original Cost × Discount Percentage  \n= $100 × 0.30  \n= $30.\n\nNext, we subtract the discount amount from the original cost to find the final cost after the discount:\n\nFinal Cost = Original Cost - Discount Amount  \n= $100 - $30  \n= $70.\n\n[Verification] We can verify our calculations by checking both the discount and final cost. The discount calculated was $30, which is indeed 30% of $100. Thus, subtracting this from $100 gives us $70, confirming that the calculations are correct.\n\n[Final Answer] The answer is $70  \n#### $70": null,
+        "I don't know the answer to this question.": null
+    },
+    "childs": {
+        "[reasoning process] To find the cost of the grooming after the discount, we first need to calculate the amount of the discount. The original grooming cost is $100. The groomer offers a 30% discount, so we can calculate the discount amount by multiplying the original cost by the discount percentage:\n\nDiscount Amount = Original Cost × Discount Percentage  \n= $100 × 0.30  \n= $30.\n\nNext, we subtract the discount amount from the original cost to find the final cost after the discount:\n\nFinal Cost = Original Cost - Discount Amount  \n= $100 - $30  \n= $70.\n\n[Verification] We can verify our calculations by checking both the discount and final cost. The discount calculated was $30, which is indeed 30% of $100. Thus, subtracting this from $100 gives us $70, confirming that the calculations are correct.\n\n[Final Answer] The answer is $70  \n#### $70": [],
+        "I don't know the answer to this question.": []
+    },
+    "ucb_bank": {},
+    "correct_answers": [
+        "[reasoning process] To find the cost of the grooming after the discount, we first need to calculate the amount of the discount. The original grooming cost is $100. The groomer offers a 30% discount, so we can calculate the discount amount by multiplying the original cost by the discount percentage:\n\nDiscount Amount = Original Cost × Discount Percentage  \n= $100 × 0.30  \n= $30.\n\nNext, we subtract the discount amount from the original cost to find the final cost after the discount:\n\nFinal Cost = Original Cost - Discount Amount  \n= $100 - $30  \n= $70.\n\n[Verification] We can verify our calculations by checking both the discount and final cost. The discount calculated was $30, which is indeed 30% of $100. Thus, subtracting this from $100 gives us $70, confirming that the calculations are correct.\n\n[Final Answer] The answer is $70  \n#### $70"
+    ],
+    "exclude": [
+        "I don't know the answer to this question."
+    ]
+}

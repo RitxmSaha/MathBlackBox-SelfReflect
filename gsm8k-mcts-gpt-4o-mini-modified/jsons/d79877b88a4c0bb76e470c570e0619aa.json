@@ -1,0 +1,50 @@
+{
+    "query": "John buys 2 pairs of shoes for each of his 3 children.  They cost $60 each.  How much did he pay?",
+    "ground_truth": "He bought 3*2=<<3*2=6>>6 pairs of shoes\nSo he spent 60*6=$<<60*6=360>>360\n#### 360",
+    "hints_list": [],
+    "answers_list": [
+        "[reasoning process] To determine how much John paid for the shoes, we first need to calculate the total number of pairs of shoes he bought. John has 3 children and buys 2 pairs for each child. So, the total pairs of shoes he buys is 3 children × 2 pairs/child = 6 pairs. \n\nNext, we find the cost for all of the pairs. Since each pair of shoes costs $60, we multiply the total pairs by the cost per pair: \n\n6 pairs × $60/pair = $360. \n\n[Verification] We can verify this calculation step-by-step. \n- First, confirm the pairs of shoes: 3 children × 2 pairs = 6 pairs. \n- Next, confirm the total cost: 6 pairs × $60 = $360. \n\nSince all calculations are consistent, John indeed paid $360 in total.\n\n[Final Answer] The answer is 360  \n#### 360",
+        "I can't understand this question."
+    ],
+    "ground_truth_hints": "",
+    "hints_prompt": "Question: John buys 2 pairs of shoes for each of his 3 children.  They cost $60 each.  How much did he pay?\nCould you provide me with the thought process to solve this problem, but please don’t give me the answer or calculation, just the thought process?",
+    "to_explore": [
+        "[reasoning process] To determine how much John paid for the shoes, we first need to calculate the total number of pairs of shoes he bought. John has 3 children and buys 2 pairs for each child. So, the total pairs of shoes he buys is 3 children × 2 pairs/child = 6 pairs. \n\nNext, we find the cost for all of the pairs. Since each pair of shoes costs $60, we multiply the total pairs by the cost per pair: \n\n6 pairs × $60/pair = $360. \n\n[Verification] We can verify this calculation step-by-step. \n- First, confirm the pairs of shoes: 3 children × 2 pairs = 6 pairs. \n- Next, confirm the total cost: 6 pairs × $60 = $360. \n\nSince all calculations are consistent, John indeed paid $360 in total.\n\n[Final Answer] The answer is 360  \n#### 360",
+        "I can't understand this question."
+    ],
+    "to_explore_reward": {
+        "[reasoning process] To determine how much John paid for the shoes, we first need to calculate the total number of pairs of shoes he bought. John has 3 children and buys 2 pairs for each child. So, the total pairs of shoes he buys is 3 children × 2 pairs/child = 6 pairs. \n\nNext, we find the cost for all of the pairs. Since each pair of shoes costs $60, we multiply the total pairs by the cost per pair: \n\n6 pairs × $60/pair = $360. \n\n[Verification] We can verify this calculation step-by-step. \n- First, confirm the pairs of shoes: 3 children × 2 pairs = 6 pairs. \n- Next, confirm the total cost: 6 pairs × $60 = $360. \n\nSince all calculations are consistent, John indeed paid $360 in total.\n\n[Final Answer] The answer is 360  \n#### 360": [
+            70.0
+        ],
+        "I can't understand this question.": [
+            -85.0
+        ]
+    },
+    "hints_bank": {},
+    "history_bank": {
+        "[reasoning process] To determine how much John paid for the shoes, we first need to calculate the total number of pairs of shoes he bought. John has 3 children and buys 2 pairs for each child. So, the total pairs of shoes he buys is 3 children × 2 pairs/child = 6 pairs. \n\nNext, we find the cost for all of the pairs. Since each pair of shoes costs $60, we multiply the total pairs by the cost per pair: \n\n6 pairs × $60/pair = $360. \n\n[Verification] We can verify this calculation step-by-step. \n- First, confirm the pairs of shoes: 3 children × 2 pairs = 6 pairs. \n- Next, confirm the total cost: 6 pairs × $60 = $360. \n\nSince all calculations are consistent, John indeed paid $360 in total.\n\n[Final Answer] The answer is 360  \n#### 360": [
+            "Question: John buys 2 pairs of shoes for each of his 3 children.  They cost $60 each.  How much did he pay?\nThe response should begin with [reasoning process]...[Verification]... and end with \"[Final Answer] The answer is [answer] \\n#### [answer]\"\nLet's think step by step.",
+            "[reasoning process] To determine how much John paid for the shoes, we first need to calculate the total number of pairs of shoes he bought. John has 3 children and buys 2 pairs for each child. So, the total pairs of shoes he buys is 3 children × 2 pairs/child = 6 pairs. \n\nNext, we find the cost for all of the pairs. Since each pair of shoes costs $60, we multiply the total pairs by the cost per pair: \n\n6 pairs × $60/pair = $360. \n\n[Verification] We can verify this calculation step-by-step. \n- First, confirm the pairs of shoes: 3 children × 2 pairs = 6 pairs. \n- Next, confirm the total cost: 6 pairs × $60 = $360. \n\nSince all calculations are consistent, John indeed paid $360 in total.\n\n[Final Answer] The answer is 360  \n#### 360"
+        ],
+        "I can't understand this question.": [
+            "Question: John buys 2 pairs of shoes for each of his 3 children.  They cost $60 each.  How much did he pay?\nThe response should begin with [reasoning process]...[Verification]... and end with \"[Final Answer] The answer is [answer] \\n#### [answer]\"\nLet's think step by step.",
+            "I can't understand this question."
+        ]
+    },
+    "hints_reward_imp_bank": {},
+    "fathers": {
+        "[reasoning process] To determine how much John paid for the shoes, we first need to calculate the total number of pairs of shoes he bought. John has 3 children and buys 2 pairs for each child. So, the total pairs of shoes he buys is 3 children × 2 pairs/child = 6 pairs. \n\nNext, we find the cost for all of the pairs. Since each pair of shoes costs $60, we multiply the total pairs by the cost per pair: \n\n6 pairs × $60/pair = $360. \n\n[Verification] We can verify this calculation step-by-step. \n- First, confirm the pairs of shoes: 3 children × 2 pairs = 6 pairs. \n- Next, confirm the total cost: 6 pairs × $60 = $360. \n\nSince all calculations are consistent, John indeed paid $360 in total.\n\n[Final Answer] The answer is 360  \n#### 360": null,
+        "I can't understand this question.": null
+    },
+    "childs": {
+        "[reasoning process] To determine how much John paid for the shoes, we first need to calculate the total number of pairs of shoes he bought. John has 3 children and buys 2 pairs for each child. So, the total pairs of shoes he buys is 3 children × 2 pairs/child = 6 pairs. \n\nNext, we find the cost for all of the pairs. Since each pair of shoes costs $60, we multiply the total pairs by the cost per pair: \n\n6 pairs × $60/pair = $360. \n\n[Verification] We can verify this calculation step-by-step. \n- First, confirm the pairs of shoes: 3 children × 2 pairs = 6 pairs. \n- Next, confirm the total cost: 6 pairs × $60 = $360. \n\nSince all calculations are consistent, John indeed paid $360 in total.\n\n[Final Answer] The answer is 360  \n#### 360": [],
+        "I can't understand this question.": []
+    },
+    "ucb_bank": {},
+    "correct_answers": [
+        "[reasoning process] To determine how much John paid for the shoes, we first need to calculate the total number of pairs of shoes he bought. John has 3 children and buys 2 pairs for each child. So, the total pairs of shoes he buys is 3 children × 2 pairs/child = 6 pairs. \n\nNext, we find the cost for all of the pairs. Since each pair of shoes costs $60, we multiply the total pairs by the cost per pair: \n\n6 pairs × $60/pair = $360. \n\n[Verification] We can verify this calculation step-by-step. \n- First, confirm the pairs of shoes: 3 children × 2 pairs = 6 pairs. \n- Next, confirm the total cost: 6 pairs × $60 = $360. \n\nSince all calculations are consistent, John indeed paid $360 in total.\n\n[Final Answer] The answer is 360  \n#### 360"
+    ],
+    "exclude": [
+        "I can't understand this question."
+    ]
+}

@@ -1,0 +1,50 @@
+{
+    "query": "Janet’s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every day with four. She sells the remainder at the farmers' market daily for $2 per fresh duck egg. How much in dollars does she make every day at the farmers' market?",
+    "ground_truth": "Janet sells 16 - 3 - 4 = <<16-3-4=9>>9 duck eggs a day.\nShe makes 9 * 2 = $<<9*2=18>>18 every day at the farmer’s market.\n#### 18",
+    "hints_list": [],
+    "answers_list": [
+        "[reasoning process] \nJanet's ducks lay a total of 16 eggs each day. She consumes 3 eggs for breakfast and uses 4 eggs for baking muffins, which totals to 3 + 4 = 7 eggs consumed daily. To find out how many eggs she has left to sell, we subtract the number of eggs she consumes from the total number of eggs laid: \n\n16 (total eggs) - 7 (eggs consumed) = 9 eggs remaining for sale.\n\nNext, Janet sells these 9 eggs at the farmers' market for $2 each. Therefore, to find out how much money she makes from selling the eggs, we multiply the number of eggs remaining by the price per egg:\n\n9 (eggs) × $2 (per egg) = $18.\n\n[Verification]\nWe confirmed the number of eggs Janet consumes and the total eggs laid correctly: 3 for breakfast and 4 for baking equals 7. The remaining eggs for sale were calculated as 16 - 7 = 9. Selling those at $2 each gives us the earnings of 9 × $2 = $18.\n\n[Final Answer] The answer is 18 \\n#### 18",
+        "I Don't Know"
+    ],
+    "ground_truth_hints": "",
+    "hints_prompt": "Question: Janet’s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every day with four. She sells the remainder at the farmers' market daily for $2 per fresh duck egg. How much in dollars does she make every day at the farmers' market?\nCould you provide me with the thought process to solve this problem, but please don’t give me the answer or calculation, just the thought process?",
+    "to_explore": [
+        "[reasoning process] \nJanet's ducks lay a total of 16 eggs each day. She consumes 3 eggs for breakfast and uses 4 eggs for baking muffins, which totals to 3 + 4 = 7 eggs consumed daily. To find out how many eggs she has left to sell, we subtract the number of eggs she consumes from the total number of eggs laid: \n\n16 (total eggs) - 7 (eggs consumed) = 9 eggs remaining for sale.\n\nNext, Janet sells these 9 eggs at the farmers' market for $2 each. Therefore, to find out how much money she makes from selling the eggs, we multiply the number of eggs remaining by the price per egg:\n\n9 (eggs) × $2 (per egg) = $18.\n\n[Verification]\nWe confirmed the number of eggs Janet consumes and the total eggs laid correctly: 3 for breakfast and 4 for baking equals 7. The remaining eggs for sale were calculated as 16 - 7 = 9. Selling those at $2 each gives us the earnings of 9 × $2 = $18.\n\n[Final Answer] The answer is 18 \\n#### 18",
+        "I Don't Know"
+    ],
+    "to_explore_reward": {
+        "[reasoning process] \nJanet's ducks lay a total of 16 eggs each day. She consumes 3 eggs for breakfast and uses 4 eggs for baking muffins, which totals to 3 + 4 = 7 eggs consumed daily. To find out how many eggs she has left to sell, we subtract the number of eggs she consumes from the total number of eggs laid: \n\n16 (total eggs) - 7 (eggs consumed) = 9 eggs remaining for sale.\n\nNext, Janet sells these 9 eggs at the farmers' market for $2 each. Therefore, to find out how much money she makes from selling the eggs, we multiply the number of eggs remaining by the price per egg:\n\n9 (eggs) × $2 (per egg) = $18.\n\n[Verification]\nWe confirmed the number of eggs Janet consumes and the total eggs laid correctly: 3 for breakfast and 4 for baking equals 7. The remaining eggs for sale were calculated as 16 - 7 = 9. Selling those at $2 each gives us the earnings of 9 × $2 = $18.\n\n[Final Answer] The answer is 18 \\n#### 18": [
+            85.0
+        ],
+        "I Don't Know": [
+            -90.0
+        ]
+    },
+    "hints_bank": {},
+    "history_bank": {
+        "[reasoning process] \nJanet's ducks lay a total of 16 eggs each day. She consumes 3 eggs for breakfast and uses 4 eggs for baking muffins, which totals to 3 + 4 = 7 eggs consumed daily. To find out how many eggs she has left to sell, we subtract the number of eggs she consumes from the total number of eggs laid: \n\n16 (total eggs) - 7 (eggs consumed) = 9 eggs remaining for sale.\n\nNext, Janet sells these 9 eggs at the farmers' market for $2 each. Therefore, to find out how much money she makes from selling the eggs, we multiply the number of eggs remaining by the price per egg:\n\n9 (eggs) × $2 (per egg) = $18.\n\n[Verification]\nWe confirmed the number of eggs Janet consumes and the total eggs laid correctly: 3 for breakfast and 4 for baking equals 7. The remaining eggs for sale were calculated as 16 - 7 = 9. Selling those at $2 each gives us the earnings of 9 × $2 = $18.\n\n[Final Answer] The answer is 18 \\n#### 18": [
+            "Question: Janet’s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every day with four. She sells the remainder at the farmers' market daily for $2 per fresh duck egg. How much in dollars does she make every day at the farmers' market?\nThe response should begin with [reasoning process]...[Verification]... and end with \"[Final Answer] The answer is [answer] \\n#### [answer]\"\nLet's think step by step.",
+            "[reasoning process] \nJanet's ducks lay a total of 16 eggs each day. She consumes 3 eggs for breakfast and uses 4 eggs for baking muffins, which totals to 3 + 4 = 7 eggs consumed daily. To find out how many eggs she has left to sell, we subtract the number of eggs she consumes from the total number of eggs laid: \n\n16 (total eggs) - 7 (eggs consumed) = 9 eggs remaining for sale.\n\nNext, Janet sells these 9 eggs at the farmers' market for $2 each. Therefore, to find out how much money she makes from selling the eggs, we multiply the number of eggs remaining by the price per egg:\n\n9 (eggs) × $2 (per egg) = $18.\n\n[Verification]\nWe confirmed the number of eggs Janet consumes and the total eggs laid correctly: 3 for breakfast and 4 for baking equals 7. The remaining eggs for sale were calculated as 16 - 7 = 9. Selling those at $2 each gives us the earnings of 9 × $2 = $18.\n\n[Final Answer] The answer is 18 \\n#### 18"
+        ],
+        "I Don't Know": [
+            "Question: Janet’s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every day with four. She sells the remainder at the farmers' market daily for $2 per fresh duck egg. How much in dollars does she make every day at the farmers' market?\nThe response should begin with [reasoning process]...[Verification]... and end with \"[Final Answer] The answer is [answer] \\n#### [answer]\"\nLet's think step by step.",
+            "I Don't Know"
+        ]
+    },
+    "hints_reward_imp_bank": {},
+    "fathers": {
+        "[reasoning process] \nJanet's ducks lay a total of 16 eggs each day. She consumes 3 eggs for breakfast and uses 4 eggs for baking muffins, which totals to 3 + 4 = 7 eggs consumed daily. To find out how many eggs she has left to sell, we subtract the number of eggs she consumes from the total number of eggs laid: \n\n16 (total eggs) - 7 (eggs consumed) = 9 eggs remaining for sale.\n\nNext, Janet sells these 9 eggs at the farmers' market for $2 each. Therefore, to find out how much money she makes from selling the eggs, we multiply the number of eggs remaining by the price per egg:\n\n9 (eggs) × $2 (per egg) = $18.\n\n[Verification]\nWe confirmed the number of eggs Janet consumes and the total eggs laid correctly: 3 for breakfast and 4 for baking equals 7. The remaining eggs for sale were calculated as 16 - 7 = 9. Selling those at $2 each gives us the earnings of 9 × $2 = $18.\n\n[Final Answer] The answer is 18 \\n#### 18": null,
+        "I Don't Know": null
+    },
+    "childs": {
+        "[reasoning process] \nJanet's ducks lay a total of 16 eggs each day. She consumes 3 eggs for breakfast and uses 4 eggs for baking muffins, which totals to 3 + 4 = 7 eggs consumed daily. To find out how many eggs she has left to sell, we subtract the number of eggs she consumes from the total number of eggs laid: \n\n16 (total eggs) - 7 (eggs consumed) = 9 eggs remaining for sale.\n\nNext, Janet sells these 9 eggs at the farmers' market for $2 each. Therefore, to find out how much money she makes from selling the eggs, we multiply the number of eggs remaining by the price per egg:\n\n9 (eggs) × $2 (per egg) = $18.\n\n[Verification]\nWe confirmed the number of eggs Janet consumes and the total eggs laid correctly: 3 for breakfast and 4 for baking equals 7. The remaining eggs for sale were calculated as 16 - 7 = 9. Selling those at $2 each gives us the earnings of 9 × $2 = $18.\n\n[Final Answer] The answer is 18 \\n#### 18": [],
+        "I Don't Know": []
+    },
+    "ucb_bank": {},
+    "correct_answers": [
+        "[reasoning process] \nJanet's ducks lay a total of 16 eggs each day. She consumes 3 eggs for breakfast and uses 4 eggs for baking muffins, which totals to 3 + 4 = 7 eggs consumed daily. To find out how many eggs she has left to sell, we subtract the number of eggs she consumes from the total number of eggs laid: \n\n16 (total eggs) - 7 (eggs consumed) = 9 eggs remaining for sale.\n\nNext, Janet sells these 9 eggs at the farmers' market for $2 each. Therefore, to find out how much money she makes from selling the eggs, we multiply the number of eggs remaining by the price per egg:\n\n9 (eggs) × $2 (per egg) = $18.\n\n[Verification]\nWe confirmed the number of eggs Janet consumes and the total eggs laid correctly: 3 for breakfast and 4 for baking equals 7. The remaining eggs for sale were calculated as 16 - 7 = 9. Selling those at $2 each gives us the earnings of 9 × $2 = $18.\n\n[Final Answer] The answer is 18 \\n#### 18"
+    ],
+    "exclude": [
+        "I Don't Know"
+    ]
+}
