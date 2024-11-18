@@ -366,11 +366,8 @@ if not os.path.exists(f"{DATA_NAME}/jsons"):
     os.mkdir(f"{DATA_NAME}/jsons")
 
 if "gsm8k" in DATA_NAME:
-    if not "mcts" in DATA_NAME:
-        dataset = load_dataset("gsm8k", "main", split="train")
-    else:
-        dataset = load_dataset("gsm8k", "main", split="test")
-        dataset = dataset.select(range(5))
+    dataset = load_dataset("gsm8k", "main", split="test")
+    dataset = dataset.select(range(120))
 
 # if 'testtime' in DATA_NAME:
 #     if 'gsm8k' in DATA_NAME:
@@ -695,6 +692,7 @@ def step(
 
 def main_loop(query, ground_truth, max_iter=16, ans_format=""):
     correct_answers = []
+    exclude = []
     to_explore = []
     to_explore_reward = {}
     history_bank = {}
@@ -731,6 +729,8 @@ def main_loop(query, ground_truth, max_iter=16, ans_format=""):
     ground_truth_label = extract_label(ground_truth)
     ###get weak answer###
     weak_answer, history = get_weak_answer(query, ans_format=ans_format)
+    if check(ground_truth, weak_answer):
+        correct_answers.append(weak_answer)
     history_bank[weak_answer] = tuple(history)
     answers_list = [
         weak_answer,
@@ -740,8 +740,7 @@ def main_loop(query, ground_truth, max_iter=16, ans_format=""):
     ]
     childs[weak_answer] = []
     fathers[weak_answer] = None
-    if check(ground_truth, weak_answer):
-        correct_answers.append(weak_answer)
+    
     # to_explore_reward = [cal_reward(query,weak_answer),]
     sampling_reward(weak_answer)
     ##add total-bad answer###
@@ -769,8 +768,8 @@ def main_loop(query, ground_truth, max_iter=16, ans_format=""):
         ]
         childs[total_bad] = []
         fathers[total_bad] = None
-        # to_explore_reward = [cal_reward(query,weak_answer),]
         sampling_reward(total_bad)
+        exclude.append(total_bad)
     hints_list = []
     if check(ground_truth, weak_answer):  # and 'testtime' in DATA_NAME
         return (
@@ -785,6 +784,7 @@ def main_loop(query, ground_truth, max_iter=16, ans_format=""):
             childs,
             ucb_bank,
             correct_answers,
+            exclude,
         )
     patient = 0 if "testtime" not in DATA_NAME else 0
     alpha = 0.45
@@ -803,9 +803,13 @@ def main_loop(query, ground_truth, max_iter=16, ans_format=""):
         weak_answer = get_best_explore_from_ucb(filterd_to_explore, ucb_bank)
         sampling_reward(weak_answer)
 
+        # 2. generate a new answer for iteration
         hints, answer, history = step(
             query, weak_answer, history=history_bank[weak_answer], ans_format=ans_format
         )
+        # 3. iterate global values
+        if check(ground_truth, answer):
+            correct_answers.append(answer)
         add_to_hints_bank(hints, weak_answer)
         history_bank[answer] = tuple(history)
         to_explore.append(answer)
@@ -828,6 +832,8 @@ def main_loop(query, ground_truth, max_iter=16, ans_format=""):
                 fathers,
                 childs,
                 ucb_bank,
+                correct_answers,
+                exclude,
             )
         elif check(ground_truth, answer) and "testtime" not in DATA_NAME:
             if patient <= 0:
@@ -842,6 +848,8 @@ def main_loop(query, ground_truth, max_iter=16, ans_format=""):
                     fathers,
                     childs,
                     ucb_bank,
+                    correct_answers,
+                    exclude,
                 )
             patient -= 1
         update_ucb(
@@ -869,6 +877,8 @@ def main_loop(query, ground_truth, max_iter=16, ans_format=""):
         fathers,
         childs,
         ucb_bank,
+        correct_answers,
+        exclude,
     )
 
 
@@ -970,6 +980,8 @@ def func(example):
         fathers,
         childs,
         ucb_bank,
+        correct_answers,
+        exclude,
     ) = main_loop(query, ground_truth, max_iter=max_iter, ans_format=ans_format)
     if len(answers_list) <= 1 and "rs" in DATA_NAME:
         return
@@ -995,6 +1007,8 @@ def func(example):
             "fathers": fathers,
             "childs": childs,
             "ucb_bank": ucb_bank,
+            "correct_answers": correct_answers,
+            "exclude": exclude,
         }
         if "rs" in DATA_NAME and not check(ground_truth, answers_list[-1]):
             return
