@@ -1,0 +1,47 @@
+{
+    "query": "A raspberry bush has 6 clusters of 20 fruit each and 67 individual fruit scattered across the bush. How many raspberries are there total?",
+    "ground_truth": "First find the number of fruit in clusters: 20 fruit/cluster * 6 clusters = <<20*6=120>>120 fruit\nThen add the number of individual fruit to find the total number of fruit: 120 fruit + 67 fruit = <<120+67=187>>187 fruit\n#### 187",
+    "hints_list": [],
+    "answers_list": [
+        "[reasoning process] To find the total number of raspberries on the bush, we first need to calculate the number of fruits from the clusters. There are 6 clusters, and each cluster has 20 fruits. So, we multiply the number of clusters by the number of fruits per cluster:\n\n6 clusters × 20 fruits/cluster = 120 fruits in clusters.\n\nNext, we add the number of individual fruits scattered across the bush, which is 67. Now we can combine these two amounts to find the total number of raspberries:\n\nTotal raspberries = Fruits in clusters + Individual fruits\nTotal raspberries = 120 + 67 = 187.\n\n[Verification] Let's double-check the calculations:\n1. Calculate the number of fruits from clusters:\n   6 × 20 = 120.\n2. Add the individual fruits:\n   120 + 67 = 187.\n\nBoth calculations are correct. \n\n[Final Answer] The answer is 187 \\n#### 187",
+        "I don't know how to solve this question."
+    ],
+    "ground_truth_hints": "",
+    "hints_prompt": "Question: A raspberry bush has 6 clusters of 20 fruit each and 67 individual fruit scattered across the bush. How many raspberries are there total?\nCould you provide me with the thought process to solve this problem, but please don’t give me the answer or calculation, just the thought process?",
+    "to_explore": [
+        "[reasoning process] To find the total number of raspberries on the bush, we first need to calculate the number of fruits from the clusters. There are 6 clusters, and each cluster has 20 fruits. So, we multiply the number of clusters by the number of fruits per cluster:\n\n6 clusters × 20 fruits/cluster = 120 fruits in clusters.\n\nNext, we add the number of individual fruits scattered across the bush, which is 67. Now we can combine these two amounts to find the total number of raspberries:\n\nTotal raspberries = Fruits in clusters + Individual fruits\nTotal raspberries = 120 + 67 = 187.\n\n[Verification] Let's double-check the calculations:\n1. Calculate the number of fruits from clusters:\n   6 × 20 = 120.\n2. Add the individual fruits:\n   120 + 67 = 187.\n\nBoth calculations are correct. \n\n[Final Answer] The answer is 187 \\n#### 187",
+        "I don't know how to solve this question."
+    ],
+    "to_explore_reward": {
+        "[reasoning process] To find the total number of raspberries on the bush, we first need to calculate the number of fruits from the clusters. There are 6 clusters, and each cluster has 20 fruits. So, we multiply the number of clusters by the number of fruits per cluster:\n\n6 clusters × 20 fruits/cluster = 120 fruits in clusters.\n\nNext, we add the number of individual fruits scattered across the bush, which is 67. Now we can combine these two amounts to find the total number of raspberries:\n\nTotal raspberries = Fruits in clusters + Individual fruits\nTotal raspberries = 120 + 67 = 187.\n\n[Verification] Let's double-check the calculations:\n1. Calculate the number of fruits from clusters:\n   6 × 20 = 120.\n2. Add the individual fruits:\n   120 + 67 = 187.\n\nBoth calculations are correct. \n\n[Final Answer] The answer is 187 \\n#### 187": [
+            50.0
+        ],
+        "I don't know how to solve this question.": [
+            -75.0
+        ]
+    },
+    "hints_bank": {},
+    "history_bank": {
+        "[reasoning process] To find the total number of raspberries on the bush, we first need to calculate the number of fruits from the clusters. There are 6 clusters, and each cluster has 20 fruits. So, we multiply the number of clusters by the number of fruits per cluster:\n\n6 clusters × 20 fruits/cluster = 120 fruits in clusters.\n\nNext, we add the number of individual fruits scattered across the bush, which is 67. Now we can combine these two amounts to find the total number of raspberries:\n\nTotal raspberries = Fruits in clusters + Individual fruits\nTotal raspberries = 120 + 67 = 187.\n\n[Verification] Let's double-check the calculations:\n1. Calculate the number of fruits from clusters:\n   6 × 20 = 120.\n2. Add the individual fruits:\n   120 + 67 = 187.\n\nBoth calculations are correct. \n\n[Final Answer] The answer is 187 \\n#### 187": [
+            "Question: A raspberry bush has 6 clusters of 20 fruit each and 67 individual fruit scattered across the bush. How many raspberries are there total?\nThe response should begin with [reasoning process]...[Verification]... and end with \"[Final Answer] The answer is [answer] \\n#### [answer]\"\nLet's think step by step.",
+            "[reasoning process] To find the total number of raspberries on the bush, we first need to calculate the number of fruits from the clusters. There are 6 clusters, and each cluster has 20 fruits. So, we multiply the number of clusters by the number of fruits per cluster:\n\n6 clusters × 20 fruits/cluster = 120 fruits in clusters.\n\nNext, we add the number of individual fruits scattered across the bush, which is 67. Now we can combine these two amounts to find the total number of raspberries:\n\nTotal raspberries = Fruits in clusters + Individual fruits\nTotal raspberries = 120 + 67 = 187.\n\n[Verification] Let's double-check the calculations:\n1. Calculate the number of fruits from clusters:\n   6 × 20 = 120.\n2. Add the individual fruits:\n   120 + 67 = 187.\n\nBoth calculations are correct. \n\n[Final Answer] The answer is 187 \\n#### 187"
+        ],
+        "I don't know how to solve this question.": [
+            "Question: A raspberry bush has 6 clusters of 20 fruit each and 67 individual fruit scattered across the bush. How many raspberries are there total?\nThe response should begin with [reasoning process]...[Verification]... and end with \"[Final Answer] The answer is [answer] \\n#### [answer]\"\nLet's think step by step.",
+            "I don't know how to solve this question."
+        ]
+    },
+    "hints_reward_imp_bank": {},
+    "fathers": {
+        "[reasoning process] To find the total number of raspberries on the bush, we first need to calculate the number of fruits from the clusters. There are 6 clusters, and each cluster has 20 fruits. So, we multiply the number of clusters by the number of fruits per cluster:\n\n6 clusters × 20 fruits/cluster = 120 fruits in clusters.\n\nNext, we add the number of individual fruits scattered across the bush, which is 67. Now we can combine these two amounts to find the total number of raspberries:\n\nTotal raspberries = Fruits in clusters + Individual fruits\nTotal raspberries = 120 + 67 = 187.\n\n[Verification] Let's double-check the calculations:\n1. Calculate the number of fruits from clusters:\n   6 × 20 = 120.\n2. Add the individual fruits:\n   120 + 67 = 187.\n\nBoth calculations are correct. \n\n[Final Answer] The answer is 187 \\n#### 187": null,
+        "I don't know how to solve this question.": null
+    },
+    "childs": {
+        "[reasoning process] To find the total number of raspberries on the bush, we first need to calculate the number of fruits from the clusters. There are 6 clusters, and each cluster has 20 fruits. So, we multiply the number of clusters by the number of fruits per cluster:\n\n6 clusters × 20 fruits/cluster = 120 fruits in clusters.\n\nNext, we add the number of individual fruits scattered across the bush, which is 67. Now we can combine these two amounts to find the total number of raspberries:\n\nTotal raspberries = Fruits in clusters + Individual fruits\nTotal raspberries = 120 + 67 = 187.\n\n[Verification] Let's double-check the calculations:\n1. Calculate the number of fruits from clusters:\n   6 × 20 = 120.\n2. Add the individual fruits:\n   120 + 67 = 187.\n\nBoth calculations are correct. \n\n[Final Answer] The answer is 187 \\n#### 187": [],
+        "I don't know how to solve this question.": []
+    },
+    "ucb_bank": {},
+    "correct_answers": [
+        "[reasoning process] To find the total number of raspberries on the bush, we first need to calculate the number of fruits from the clusters. There are 6 clusters, and each cluster has 20 fruits. So, we multiply the number of clusters by the number of fruits per cluster:\n\n6 clusters × 20 fruits/cluster = 120 fruits in clusters.\n\nNext, we add the number of individual fruits scattered across the bush, which is 67. Now we can combine these two amounts to find the total number of raspberries:\n\nTotal raspberries = Fruits in clusters + Individual fruits\nTotal raspberries = 120 + 67 = 187.\n\n[Verification] Let's double-check the calculations:\n1. Calculate the number of fruits from clusters:\n   6 × 20 = 120.\n2. Add the individual fruits:\n   120 + 67 = 187.\n\nBoth calculations are correct. \n\n[Final Answer] The answer is 187 \\n#### 187"
+    ]
+}

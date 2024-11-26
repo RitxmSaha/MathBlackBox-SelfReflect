@@ -1,0 +1,47 @@
+{
+    "query": "Jim spends 2 hours watching TV and then decides to go to bed and reads for half as long.  He does this 3 times a week.  How many hours does he spend on TV and reading in 4 weeks?",
+    "ground_truth": "He reads for 2/2=<<2/2=1>>1 hour a night\nSo he spends 2+1=<<2+1=3>>3 hours on these activities\nThat means he spends 3*3=<<3*3=9>>9 hours a week on them\nSo in 4 weeks, he spends 9*4=<<9*4=36>>36 hours on these activities\n#### 36",
+    "hints_list": [],
+    "answers_list": [
+        "[reasoning process] Jim watches TV for 2 hours and then reads for half as long, which is 1 hour (since half of 2 hours is 1 hour). Therefore, in one session of watching TV and reading, he spends a total of 2 hours + 1 hour = 3 hours. He does this 3 times a week, so in one week, Jim spends 3 times 3 hours, which equals 9 hours. Over the course of 4 weeks, he will have done this activity 4 times, so we multiply the weekly total by 4: 9 hours/week * 4 weeks = 36 hours. \n\n[Verification] To verify, let’s break it down: \n- In one week, he has 3 sessions, each lasting 3 hours, leading to 3 sessions * 3 hours/session = 9 hours/week.\n- For 4 weeks, 9 hours/week * 4 weeks = 36 hours total. \n\nThis confirms our calculation is accurate.\n\n[Final Answer] The answer is 36 \\n#### 36",
+        "I Don't Know"
+    ],
+    "ground_truth_hints": "",
+    "hints_prompt": "Question: Jim spends 2 hours watching TV and then decides to go to bed and reads for half as long.  He does this 3 times a week.  How many hours does he spend on TV and reading in 4 weeks?\nCould you provide me with the thought process to solve this problem, but please don’t give me the answer or calculation, just the thought process?",
+    "to_explore": [
+        "[reasoning process] Jim watches TV for 2 hours and then reads for half as long, which is 1 hour (since half of 2 hours is 1 hour). Therefore, in one session of watching TV and reading, he spends a total of 2 hours + 1 hour = 3 hours. He does this 3 times a week, so in one week, Jim spends 3 times 3 hours, which equals 9 hours. Over the course of 4 weeks, he will have done this activity 4 times, so we multiply the weekly total by 4: 9 hours/week * 4 weeks = 36 hours. \n\n[Verification] To verify, let’s break it down: \n- In one week, he has 3 sessions, each lasting 3 hours, leading to 3 sessions * 3 hours/session = 9 hours/week.\n- For 4 weeks, 9 hours/week * 4 weeks = 36 hours total. \n\nThis confirms our calculation is accurate.\n\n[Final Answer] The answer is 36 \\n#### 36",
+        "I Don't Know"
+    ],
+    "to_explore_reward": {
+        "[reasoning process] Jim watches TV for 2 hours and then reads for half as long, which is 1 hour (since half of 2 hours is 1 hour). Therefore, in one session of watching TV and reading, he spends a total of 2 hours + 1 hour = 3 hours. He does this 3 times a week, so in one week, Jim spends 3 times 3 hours, which equals 9 hours. Over the course of 4 weeks, he will have done this activity 4 times, so we multiply the weekly total by 4: 9 hours/week * 4 weeks = 36 hours. \n\n[Verification] To verify, let’s break it down: \n- In one week, he has 3 sessions, each lasting 3 hours, leading to 3 sessions * 3 hours/session = 9 hours/week.\n- For 4 weeks, 9 hours/week * 4 weeks = 36 hours total. \n\nThis confirms our calculation is accurate.\n\n[Final Answer] The answer is 36 \\n#### 36": [
+            85.0
+        ],
+        "I Don't Know": [
+            -95.0
+        ]
+    },
+    "hints_bank": {},
+    "history_bank": {
+        "[reasoning process] Jim watches TV for 2 hours and then reads for half as long, which is 1 hour (since half of 2 hours is 1 hour). Therefore, in one session of watching TV and reading, he spends a total of 2 hours + 1 hour = 3 hours. He does this 3 times a week, so in one week, Jim spends 3 times 3 hours, which equals 9 hours. Over the course of 4 weeks, he will have done this activity 4 times, so we multiply the weekly total by 4: 9 hours/week * 4 weeks = 36 hours. \n\n[Verification] To verify, let’s break it down: \n- In one week, he has 3 sessions, each lasting 3 hours, leading to 3 sessions * 3 hours/session = 9 hours/week.\n- For 4 weeks, 9 hours/week * 4 weeks = 36 hours total. \n\nThis confirms our calculation is accurate.\n\n[Final Answer] The answer is 36 \\n#### 36": [
+            "Question: Jim spends 2 hours watching TV and then decides to go to bed and reads for half as long.  He does this 3 times a week.  How many hours does he spend on TV and reading in 4 weeks?\nThe response should begin with [reasoning process]...[Verification]... and end with \"[Final Answer] The answer is [answer] \\n#### [answer]\"\nLet's think step by step.",
+            "[reasoning process] Jim watches TV for 2 hours and then reads for half as long, which is 1 hour (since half of 2 hours is 1 hour). Therefore, in one session of watching TV and reading, he spends a total of 2 hours + 1 hour = 3 hours. He does this 3 times a week, so in one week, Jim spends 3 times 3 hours, which equals 9 hours. Over the course of 4 weeks, he will have done this activity 4 times, so we multiply the weekly total by 4: 9 hours/week * 4 weeks = 36 hours. \n\n[Verification] To verify, let’s break it down: \n- In one week, he has 3 sessions, each lasting 3 hours, leading to 3 sessions * 3 hours/session = 9 hours/week.\n- For 4 weeks, 9 hours/week * 4 weeks = 36 hours total. \n\nThis confirms our calculation is accurate.\n\n[Final Answer] The answer is 36 \\n#### 36"
+        ],
+        "I Don't Know": [
+            "Question: Jim spends 2 hours watching TV and then decides to go to bed and reads for half as long.  He does this 3 times a week.  How many hours does he spend on TV and reading in 4 weeks?\nThe response should begin with [reasoning process]...[Verification]... and end with \"[Final Answer] The answer is [answer] \\n#### [answer]\"\nLet's think step by step.",
+            "I Don't Know"
+        ]
+    },
+    "hints_reward_imp_bank": {},
+    "fathers": {
+        "[reasoning process] Jim watches TV for 2 hours and then reads for half as long, which is 1 hour (since half of 2 hours is 1 hour). Therefore, in one session of watching TV and reading, he spends a total of 2 hours + 1 hour = 3 hours. He does this 3 times a week, so in one week, Jim spends 3 times 3 hours, which equals 9 hours. Over the course of 4 weeks, he will have done this activity 4 times, so we multiply the weekly total by 4: 9 hours/week * 4 weeks = 36 hours. \n\n[Verification] To verify, let’s break it down: \n- In one week, he has 3 sessions, each lasting 3 hours, leading to 3 sessions * 3 hours/session = 9 hours/week.\n- For 4 weeks, 9 hours/week * 4 weeks = 36 hours total. \n\nThis confirms our calculation is accurate.\n\n[Final Answer] The answer is 36 \\n#### 36": null,
+        "I Don't Know": null
+    },
+    "childs": {
+        "[reasoning process] Jim watches TV for 2 hours and then reads for half as long, which is 1 hour (since half of 2 hours is 1 hour). Therefore, in one session of watching TV and reading, he spends a total of 2 hours + 1 hour = 3 hours. He does this 3 times a week, so in one week, Jim spends 3 times 3 hours, which equals 9 hours. Over the course of 4 weeks, he will have done this activity 4 times, so we multiply the weekly total by 4: 9 hours/week * 4 weeks = 36 hours. \n\n[Verification] To verify, let’s break it down: \n- In one week, he has 3 sessions, each lasting 3 hours, leading to 3 sessions * 3 hours/session = 9 hours/week.\n- For 4 weeks, 9 hours/week * 4 weeks = 36 hours total. \n\nThis confirms our calculation is accurate.\n\n[Final Answer] The answer is 36 \\n#### 36": [],
+        "I Don't Know": []
+    },
+    "ucb_bank": {},
+    "correct_answers": [
+        "[reasoning process] Jim watches TV for 2 hours and then reads for half as long, which is 1 hour (since half of 2 hours is 1 hour). Therefore, in one session of watching TV and reading, he spends a total of 2 hours + 1 hour = 3 hours. He does this 3 times a week, so in one week, Jim spends 3 times 3 hours, which equals 9 hours. Over the course of 4 weeks, he will have done this activity 4 times, so we multiply the weekly total by 4: 9 hours/week * 4 weeks = 36 hours. \n\n[Verification] To verify, let’s break it down: \n- In one week, he has 3 sessions, each lasting 3 hours, leading to 3 sessions * 3 hours/session = 9 hours/week.\n- For 4 weeks, 9 hours/week * 4 weeks = 36 hours total. \n\nThis confirms our calculation is accurate.\n\n[Final Answer] The answer is 36 \\n#### 36"
+    ]
+}

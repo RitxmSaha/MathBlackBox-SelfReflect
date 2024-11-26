@@ -62,7 +62,7 @@ def get_clients():
     """Initialize API keys from environment variables"""
     global clients
     api_keys = [
-        os.getenv("OPENAI_API_KEY"),
+        os.getenv("CUSTOM_LLM_API_KEY"),
         # Add other API keys as needed
     ]
 
@@ -429,6 +429,7 @@ def generate(prompt, history=[], timeout=150, truncate=True):
             messages=history_ + [{"role": "user", "content": prompt}],
             temperature=0.95,
             timeout=timeout,
+            base_url= "http://avior.mlfoundry.com/live-inference/v1",
             api_key=random.choice(clients),
         )
         print(f"response received! time taken: {time.time()-time0} seconds.")
@@ -451,14 +452,10 @@ def cal_reward(question, ans):
     if not scores:
         raise Exception("no")
     else:
-        ret = float(scores[-1])
-        # if abs(ret - 100.0) < 1e-5:
-        #     ret = 50.0
-        if ret >= 95:
-            ret = 50
-        # elif ret <= -100:
-        #     ret = -50
-        return ret
+        ret_score = float(scores[-1])
+        if ret_score >= 95:
+            ret_score = 50
+        return ret_score, ret[0]  # Return both score and analysis text
 
 
 @retry()
@@ -691,6 +688,9 @@ def step(
 
 
 def main_loop(query, ground_truth, max_iter=16, ans_format=""):
+
+    global reward_analysis
+    reward_analysis = {}
     correct_answers = []
     exclude = []
     to_explore = []
@@ -704,10 +704,11 @@ def main_loop(query, ground_truth, max_iter=16, ans_format=""):
     def sampling_reward(answer):
         if answer not in to_explore_reward:
             to_explore_reward[answer] = []
-        reward = cal_reward(query, answer)
-        # if check(ground_truth,answer):
-        #     reward += 100
-        to_explore_reward[answer].append(reward)
+        if answer not in reward_analysis:  # Add new dictionary for analysis
+            reward_analysis[answer] = []
+        score, analysis = cal_reward(query, answer)
+        to_explore_reward[answer].append(score)
+        reward_analysis[answer].append(analysis)  # Store the analysis text
 
     def add_to_hints_bank(hints, weak_answer):
         if weak_answer not in hints_bank:
@@ -773,19 +774,20 @@ def main_loop(query, ground_truth, max_iter=16, ans_format=""):
     hints_list = []
     if check(ground_truth, weak_answer):  # and 'testtime' in DATA_NAME
         return (
-            hints_list,
-            answers_list,
-            to_explore,
-            to_explore_reward,
-            hints_bank,
-            history_bank,
-            hints_reward_imp_bank,
-            fathers,
-            childs,
-            ucb_bank,
-            correct_answers,
-            exclude,
-        )
+        hints_list,
+        answers_list,
+        to_explore,
+        to_explore_reward,
+        hints_bank,
+        history_bank,
+        hints_reward_imp_bank,
+        fathers,
+        childs,
+        ucb_bank,
+        correct_answers,
+        exclude,
+        reward_analysis,  # Add reward_analysis to return tuple
+    )
     patient = 0 if "testtime" not in DATA_NAME else 0
     alpha = 0.45
     update_ucb(
@@ -822,35 +824,37 @@ def main_loop(query, ground_truth, max_iter=16, ans_format=""):
 
         if check(ground_truth, answer) and "testtime" in DATA_NAME:
             return (
-                hints_list,
-                answers_list,
-                to_explore,
-                to_explore_reward,
-                hints_bank,
-                history_bank,
-                hints_reward_imp_bank,
-                fathers,
-                childs,
-                ucb_bank,
-                correct_answers,
-                exclude,
-            )
+            hints_list,
+            answers_list,
+            to_explore,
+            to_explore_reward,
+            hints_bank,
+            history_bank,
+            hints_reward_imp_bank,
+            fathers,
+            childs,
+            ucb_bank,
+            correct_answers,
+            exclude,
+            reward_analysis,  # Add reward_analysis to return tuple
+        )
         elif check(ground_truth, answer) and "testtime" not in DATA_NAME:
             if patient <= 0:
                 return (
-                    hints_list,
-                    answers_list,
-                    to_explore,
-                    to_explore_reward,
-                    hints_bank,
-                    history_bank,
-                    hints_reward_imp_bank,
-                    fathers,
-                    childs,
-                    ucb_bank,
-                    correct_answers,
-                    exclude,
-                )
+                        hints_list,
+                        answers_list,
+                        to_explore,
+                        to_explore_reward,
+                        hints_bank,
+                        history_bank,
+                        hints_reward_imp_bank,
+                        fathers,
+                        childs,
+                        ucb_bank,
+                        correct_answers,
+                        exclude,
+                        reward_analysis,  # Add reward_analysis to return tuple
+                    )
             patient -= 1
         update_ucb(
             fathers=fathers,
@@ -879,6 +883,7 @@ def main_loop(query, ground_truth, max_iter=16, ans_format=""):
         ucb_bank,
         correct_answers,
         exclude,
+        reward_analysis,  # Add reward_analysis to return tuple
     )
 
 
@@ -982,6 +987,7 @@ def func(example):
         ucb_bank,
         correct_answers,
         exclude,
+        reward_analysis,
     ) = main_loop(query, ground_truth, max_iter=max_iter, ans_format=ans_format)
     if len(answers_list) <= 1 and "rs" in DATA_NAME:
         return
@@ -1001,6 +1007,7 @@ def func(example):
             "hints_prompt": hints_prompt,
             "to_explore": to_explore,
             "to_explore_reward": to_explore_reward,
+            "reward_analysis": reward_analysis,  # Add reward_analysis to output JSON
             "hints_bank": hints_bank,
             "history_bank": history_bank,
             "hints_reward_imp_bank": hints_reward_imp_bank,

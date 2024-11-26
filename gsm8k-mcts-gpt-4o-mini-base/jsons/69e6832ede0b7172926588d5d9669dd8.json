@@ -1,0 +1,47 @@
+{
+    "query": "Bailey starts with a certain amount of money. Then she receives a weekly allowance of $5 for 8 weeks. At the end of the 8 weeks, if she has a total of $100, how much money did Bailey start with?",
+    "ground_truth": "In 8 weeks, Bailey receives $5 * 8 = $<<5*8=40>>40 in allowance\nBailey started with $100 - $40 = $<<100-40=60>>60\n#### 60",
+    "hints_list": [],
+    "answers_list": [
+        "[reasoning process] Let's denote the amount of money Bailey starts with as \\( x \\). Each week, she receives a $5 allowance, and over 8 weeks, the total amount of money she receives from her allowance is \\( 5 \\times 8 = 40 \\) dollars. Adding this to her initial amount gives us the equation:\n\n\\[\nx + 40 = 100\n\\]\n\nTo find \\( x \\), we solve the equation by subtracting 40 from both sides:\n\n\\[\nx = 100 - 40\n\\]\n\\[\nx = 60\n\\]\n\nSo, Bailey started with $60.\n\n[Verification] To confirm our solution, we can add the total allowance received to Bailey’s starting amount to see if it equals $100:\n\nStarting amount: $60  \nAllowance received over 8 weeks: $40  \nTotal amount after 8 weeks: $60 + $40 = $100\n\nSince this matches the total given in the problem, our solution is verified.\n\n[Final Answer] The answer is 60 \\n#### 60",
+        "I don't know how to solve this question."
+    ],
+    "ground_truth_hints": "",
+    "hints_prompt": "Question: Bailey starts with a certain amount of money. Then she receives a weekly allowance of $5 for 8 weeks. At the end of the 8 weeks, if she has a total of $100, how much money did Bailey start with?\nCould you provide me with the thought process to solve this problem, but please don’t give me the answer or calculation, just the thought process?",
+    "to_explore": [
+        "[reasoning process] Let's denote the amount of money Bailey starts with as \\( x \\). Each week, she receives a $5 allowance, and over 8 weeks, the total amount of money she receives from her allowance is \\( 5 \\times 8 = 40 \\) dollars. Adding this to her initial amount gives us the equation:\n\n\\[\nx + 40 = 100\n\\]\n\nTo find \\( x \\), we solve the equation by subtracting 40 from both sides:\n\n\\[\nx = 100 - 40\n\\]\n\\[\nx = 60\n\\]\n\nSo, Bailey started with $60.\n\n[Verification] To confirm our solution, we can add the total allowance received to Bailey’s starting amount to see if it equals $100:\n\nStarting amount: $60  \nAllowance received over 8 weeks: $40  \nTotal amount after 8 weeks: $60 + $40 = $100\n\nSince this matches the total given in the problem, our solution is verified.\n\n[Final Answer] The answer is 60 \\n#### 60",
+        "I don't know how to solve this question."
+    ],
+    "to_explore_reward": {
+        "[reasoning process] Let's denote the amount of money Bailey starts with as \\( x \\). Each week, she receives a $5 allowance, and over 8 weeks, the total amount of money she receives from her allowance is \\( 5 \\times 8 = 40 \\) dollars. Adding this to her initial amount gives us the equation:\n\n\\[\nx + 40 = 100\n\\]\n\nTo find \\( x \\), we solve the equation by subtracting 40 from both sides:\n\n\\[\nx = 100 - 40\n\\]\n\\[\nx = 60\n\\]\n\nSo, Bailey started with $60.\n\n[Verification] To confirm our solution, we can add the total allowance received to Bailey’s starting amount to see if it equals $100:\n\nStarting amount: $60  \nAllowance received over 8 weeks: $40  \nTotal amount after 8 weeks: $60 + $40 = $100\n\nSince this matches the total given in the problem, our solution is verified.\n\n[Final Answer] The answer is 60 \\n#### 60": [
+            80.0
+        ],
+        "I don't know how to solve this question.": [
+            -80.0
+        ]
+    },
+    "hints_bank": {},
+    "history_bank": {
+        "[reasoning process] Let's denote the amount of money Bailey starts with as \\( x \\). Each week, she receives a $5 allowance, and over 8 weeks, the total amount of money she receives from her allowance is \\( 5 \\times 8 = 40 \\) dollars. Adding this to her initial amount gives us the equation:\n\n\\[\nx + 40 = 100\n\\]\n\nTo find \\( x \\), we solve the equation by subtracting 40 from both sides:\n\n\\[\nx = 100 - 40\n\\]\n\\[\nx = 60\n\\]\n\nSo, Bailey started with $60.\n\n[Verification] To confirm our solution, we can add the total allowance received to Bailey’s starting amount to see if it equals $100:\n\nStarting amount: $60  \nAllowance received over 8 weeks: $40  \nTotal amount after 8 weeks: $60 + $40 = $100\n\nSince this matches the total given in the problem, our solution is verified.\n\n[Final Answer] The answer is 60 \\n#### 60": [
+            "Question: Bailey starts with a certain amount of money. Then she receives a weekly allowance of $5 for 8 weeks. At the end of the 8 weeks, if she has a total of $100, how much money did Bailey start with?\nThe response should begin with [reasoning process]...[Verification]... and end with \"[Final Answer] The answer is [answer] \\n#### [answer]\"\nLet's think step by step.",
+            "[reasoning process] Let's denote the amount of money Bailey starts with as \\( x \\). Each week, she receives a $5 allowance, and over 8 weeks, the total amount of money she receives from her allowance is \\( 5 \\times 8 = 40 \\) dollars. Adding this to her initial amount gives us the equation:\n\n\\[\nx + 40 = 100\n\\]\n\nTo find \\( x \\), we solve the equation by subtracting 40 from both sides:\n\n\\[\nx = 100 - 40\n\\]\n\\[\nx = 60\n\\]\n\nSo, Bailey started with $60.\n\n[Verification] To confirm our solution, we can add the total allowance received to Bailey’s starting amount to see if it equals $100:\n\nStarting amount: $60  \nAllowance received over 8 weeks: $40  \nTotal amount after 8 weeks: $60 + $40 = $100\n\nSince this matches the total given in the problem, our solution is verified.\n\n[Final Answer] The answer is 60 \\n#### 60"
+        ],
+        "I don't know how to solve this question.": [
+            "Question: Bailey starts with a certain amount of money. Then she receives a weekly allowance of $5 for 8 weeks. At the end of the 8 weeks, if she has a total of $100, how much money did Bailey start with?\nThe response should begin with [reasoning process]...[Verification]... and end with \"[Final Answer] The answer is [answer] \\n#### [answer]\"\nLet's think step by step.",
+            "I don't know how to solve this question."
+        ]
+    },
+    "hints_reward_imp_bank": {},
+    "fathers": {
+        "[reasoning process] Let's denote the amount of money Bailey starts with as \\( x \\). Each week, she receives a $5 allowance, and over 8 weeks, the total amount of money she receives from her allowance is \\( 5 \\times 8 = 40 \\) dollars. Adding this to her initial amount gives us the equation:\n\n\\[\nx + 40 = 100\n\\]\n\nTo find \\( x \\), we solve the equation by subtracting 40 from both sides:\n\n\\[\nx = 100 - 40\n\\]\n\\[\nx = 60\n\\]\n\nSo, Bailey started with $60.\n\n[Verification] To confirm our solution, we can add the total allowance received to Bailey’s starting amount to see if it equals $100:\n\nStarting amount: $60  \nAllowance received over 8 weeks: $40  \nTotal amount after 8 weeks: $60 + $40 = $100\n\nSince this matches the total given in the problem, our solution is verified.\n\n[Final Answer] The answer is 60 \\n#### 60": null,
+        "I don't know how to solve this question.": null
+    },
+    "childs": {
+        "[reasoning process] Let's denote the amount of money Bailey starts with as \\( x \\). Each week, she receives a $5 allowance, and over 8 weeks, the total amount of money she receives from her allowance is \\( 5 \\times 8 = 40 \\) dollars. Adding this to her initial amount gives us the equation:\n\n\\[\nx + 40 = 100\n\\]\n\nTo find \\( x \\), we solve the equation by subtracting 40 from both sides:\n\n\\[\nx = 100 - 40\n\\]\n\\[\nx = 60\n\\]\n\nSo, Bailey started with $60.\n\n[Verification] To confirm our solution, we can add the total allowance received to Bailey’s starting amount to see if it equals $100:\n\nStarting amount: $60  \nAllowance received over 8 weeks: $40  \nTotal amount after 8 weeks: $60 + $40 = $100\n\nSince this matches the total given in the problem, our solution is verified.\n\n[Final Answer] The answer is 60 \\n#### 60": [],
+        "I don't know how to solve this question.": []
+    },
+    "ucb_bank": {},
+    "correct_answers": [
+        "[reasoning process] Let's denote the amount of money Bailey starts with as \\( x \\). Each week, she receives a $5 allowance, and over 8 weeks, the total amount of money she receives from her allowance is \\( 5 \\times 8 = 40 \\) dollars. Adding this to her initial amount gives us the equation:\n\n\\[\nx + 40 = 100\n\\]\n\nTo find \\( x \\), we solve the equation by subtracting 40 from both sides:\n\n\\[\nx = 100 - 40\n\\]\n\\[\nx = 60\n\\]\n\nSo, Bailey started with $60.\n\n[Verification] To confirm our solution, we can add the total allowance received to Bailey’s starting amount to see if it equals $100:\n\nStarting amount: $60  \nAllowance received over 8 weeks: $40  \nTotal amount after 8 weeks: $60 + $40 = $100\n\nSince this matches the total given in the problem, our solution is verified.\n\n[Final Answer] The answer is 60 \\n#### 60"
+    ]
+}

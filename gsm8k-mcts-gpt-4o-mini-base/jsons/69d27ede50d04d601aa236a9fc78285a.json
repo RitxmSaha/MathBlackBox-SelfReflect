@@ -1,0 +1,47 @@
+{
+    "query": "Jan has three times the number of pets as Marcia. Marcia has two more pets than Cindy. If Cindy has four pets, how many total pets do the three have?",
+    "ground_truth": "Marcia has 4 + 2 = <<4+2=6>>6 pets.\nJan has 3 * 6 = <<3*6=18>>18 pets\nIn total, the three have 4 + 6 + 18 = <<4+6+18=28>>28 pets.\n#### 28",
+    "hints_list": [],
+    "answers_list": [
+        "[reasoning process] Let's define the number of pets each person has based on the information provided:\n\n1. Cindy has 4 pets.\n2. Marcia has two more pets than Cindy. Since Cindy has 4 pets, Marcia has 4 + 2 = 6 pets.\n3. Jan has three times the number of pets that Marcia has. Since Marcia has 6 pets, Jan has 3 × 6 = 18 pets.\n\nNow, we can find the total number of pets by adding the number of pets each person has:\n\nTotal pets = Jan's pets + Marcia's pets + Cindy's pets  \nTotal pets = 18 + 6 + 4 = 28.\n\n[Verification] We calculated:  \n- Cindy has 4 pets.  \n- Marcia has 6 pets (4 + 2).  \n- Jan has 18 pets (3 times Marcia's 6).  \nAdding these together gives us 18 + 6 + 4 = 28.\n\nEverything checks out as we've applied the relationships correctly.\n\n[Final Answer] The answer is 28 \\n#### 28",
+        "I don't know the answer to this question."
+    ],
+    "ground_truth_hints": "",
+    "hints_prompt": "Question: Jan has three times the number of pets as Marcia. Marcia has two more pets than Cindy. If Cindy has four pets, how many total pets do the three have?\nCould you provide me with the thought process to solve this problem, but please don’t give me the answer or calculation, just the thought process?",
+    "to_explore": [
+        "[reasoning process] Let's define the number of pets each person has based on the information provided:\n\n1. Cindy has 4 pets.\n2. Marcia has two more pets than Cindy. Since Cindy has 4 pets, Marcia has 4 + 2 = 6 pets.\n3. Jan has three times the number of pets that Marcia has. Since Marcia has 6 pets, Jan has 3 × 6 = 18 pets.\n\nNow, we can find the total number of pets by adding the number of pets each person has:\n\nTotal pets = Jan's pets + Marcia's pets + Cindy's pets  \nTotal pets = 18 + 6 + 4 = 28.\n\n[Verification] We calculated:  \n- Cindy has 4 pets.  \n- Marcia has 6 pets (4 + 2).  \n- Jan has 18 pets (3 times Marcia's 6).  \nAdding these together gives us 18 + 6 + 4 = 28.\n\nEverything checks out as we've applied the relationships correctly.\n\n[Final Answer] The answer is 28 \\n#### 28",
+        "I don't know the answer to this question."
+    ],
+    "to_explore_reward": {
+        "[reasoning process] Let's define the number of pets each person has based on the information provided:\n\n1. Cindy has 4 pets.\n2. Marcia has two more pets than Cindy. Since Cindy has 4 pets, Marcia has 4 + 2 = 6 pets.\n3. Jan has three times the number of pets that Marcia has. Since Marcia has 6 pets, Jan has 3 × 6 = 18 pets.\n\nNow, we can find the total number of pets by adding the number of pets each person has:\n\nTotal pets = Jan's pets + Marcia's pets + Cindy's pets  \nTotal pets = 18 + 6 + 4 = 28.\n\n[Verification] We calculated:  \n- Cindy has 4 pets.  \n- Marcia has 6 pets (4 + 2).  \n- Jan has 18 pets (3 times Marcia's 6).  \nAdding these together gives us 18 + 6 + 4 = 28.\n\nEverything checks out as we've applied the relationships correctly.\n\n[Final Answer] The answer is 28 \\n#### 28": [
+            80.0
+        ],
+        "I don't know the answer to this question.": [
+            -85.0
+        ]
+    },
+    "hints_bank": {},
+    "history_bank": {
+        "[reasoning process] Let's define the number of pets each person has based on the information provided:\n\n1. Cindy has 4 pets.\n2. Marcia has two more pets than Cindy. Since Cindy has 4 pets, Marcia has 4 + 2 = 6 pets.\n3. Jan has three times the number of pets that Marcia has. Since Marcia has 6 pets, Jan has 3 × 6 = 18 pets.\n\nNow, we can find the total number of pets by adding the number of pets each person has:\n\nTotal pets = Jan's pets + Marcia's pets + Cindy's pets  \nTotal pets = 18 + 6 + 4 = 28.\n\n[Verification] We calculated:  \n- Cindy has 4 pets.  \n- Marcia has 6 pets (4 + 2).  \n- Jan has 18 pets (3 times Marcia's 6).  \nAdding these together gives us 18 + 6 + 4 = 28.\n\nEverything checks out as we've applied the relationships correctly.\n\n[Final Answer] The answer is 28 \\n#### 28": [
+            "Question: Jan has three times the number of pets as Marcia. Marcia has two more pets than Cindy. If Cindy has four pets, how many total pets do the three have?\nThe response should begin with [reasoning process]...[Verification]... and end with \"[Final Answer] The answer is [answer] \\n#### [answer]\"\nLet's think step by step.",
+            "[reasoning process] Let's define the number of pets each person has based on the information provided:\n\n1. Cindy has 4 pets.\n2. Marcia has two more pets than Cindy. Since Cindy has 4 pets, Marcia has 4 + 2 = 6 pets.\n3. Jan has three times the number of pets that Marcia has. Since Marcia has 6 pets, Jan has 3 × 6 = 18 pets.\n\nNow, we can find the total number of pets by adding the number of pets each person has:\n\nTotal pets = Jan's pets + Marcia's pets + Cindy's pets  \nTotal pets = 18 + 6 + 4 = 28.\n\n[Verification] We calculated:  \n- Cindy has 4 pets.  \n- Marcia has 6 pets (4 + 2).  \n- Jan has 18 pets (3 times Marcia's 6).  \nAdding these together gives us 18 + 6 + 4 = 28.\n\nEverything checks out as we've applied the relationships correctly.\n\n[Final Answer] The answer is 28 \\n#### 28"
+        ],
+        "I don't know the answer to this question.": [
+            "Question: Jan has three times the number of pets as Marcia. Marcia has two more pets than Cindy. If Cindy has four pets, how many total pets do the three have?\nThe response should begin with [reasoning process]...[Verification]... and end with \"[Final Answer] The answer is [answer] \\n#### [answer]\"\nLet's think step by step.",
+            "I don't know the answer to this question."
+        ]
+    },
+    "hints_reward_imp_bank": {},
+    "fathers": {
+        "[reasoning process] Let's define the number of pets each person has based on the information provided:\n\n1. Cindy has 4 pets.\n2. Marcia has two more pets than Cindy. Since Cindy has 4 pets, Marcia has 4 + 2 = 6 pets.\n3. Jan has three times the number of pets that Marcia has. Since Marcia has 6 pets, Jan has 3 × 6 = 18 pets.\n\nNow, we can find the total number of pets by adding the number of pets each person has:\n\nTotal pets = Jan's pets + Marcia's pets + Cindy's pets  \nTotal pets = 18 + 6 + 4 = 28.\n\n[Verification] We calculated:  \n- Cindy has 4 pets.  \n- Marcia has 6 pets (4 + 2).  \n- Jan has 18 pets (3 times Marcia's 6).  \nAdding these together gives us 18 + 6 + 4 = 28.\n\nEverything checks out as we've applied the relationships correctly.\n\n[Final Answer] The answer is 28 \\n#### 28": null,
+        "I don't know the answer to this question.": null
+    },
+    "childs": {
+        "[reasoning process] Let's define the number of pets each person has based on the information provided:\n\n1. Cindy has 4 pets.\n2. Marcia has two more pets than Cindy. Since Cindy has 4 pets, Marcia has 4 + 2 = 6 pets.\n3. Jan has three times the number of pets that Marcia has. Since Marcia has 6 pets, Jan has 3 × 6 = 18 pets.\n\nNow, we can find the total number of pets by adding the number of pets each person has:\n\nTotal pets = Jan's pets + Marcia's pets + Cindy's pets  \nTotal pets = 18 + 6 + 4 = 28.\n\n[Verification] We calculated:  \n- Cindy has 4 pets.  \n- Marcia has 6 pets (4 + 2).  \n- Jan has 18 pets (3 times Marcia's 6).  \nAdding these together gives us 18 + 6 + 4 = 28.\n\nEverything checks out as we've applied the relationships correctly.\n\n[Final Answer] The answer is 28 \\n#### 28": [],
+        "I don't know the answer to this question.": []
+    },
+    "ucb_bank": {},
+    "correct_answers": [
+        "[reasoning process] Let's define the number of pets each person has based on the information provided:\n\n1. Cindy has 4 pets.\n2. Marcia has two more pets than Cindy. Since Cindy has 4 pets, Marcia has 4 + 2 = 6 pets.\n3. Jan has three times the number of pets that Marcia has. Since Marcia has 6 pets, Jan has 3 × 6 = 18 pets.\n\nNow, we can find the total number of pets by adding the number of pets each person has:\n\nTotal pets = Jan's pets + Marcia's pets + Cindy's pets  \nTotal pets = 18 + 6 + 4 = 28.\n\n[Verification] We calculated:  \n- Cindy has 4 pets.  \n- Marcia has 6 pets (4 + 2).  \n- Jan has 18 pets (3 times Marcia's 6).  \nAdding these together gives us 18 + 6 + 4 = 28.\n\nEverything checks out as we've applied the relationships correctly.\n\n[Final Answer] The answer is 28 \\n#### 28"
+    ]
+}

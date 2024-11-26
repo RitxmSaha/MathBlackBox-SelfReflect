@@ -1,0 +1,47 @@
+{
+    "query": "John buys 2 pairs of shoes for each of his 3 children.  They cost $60 each.  How much did he pay?",
+    "ground_truth": "He bought 3*2=<<3*2=6>>6 pairs of shoes\nSo he spent 60*6=$<<60*6=360>>360\n#### 360",
+    "hints_list": [],
+    "answers_list": [
+        "[reasoning process] \nFirst, we need to determine how many pairs of shoes John bought in total. He has 3 children, and he buys 2 pairs of shoes for each child. Therefore, we calculate the total number of pairs of shoes: \n3 children × 2 pairs per child = 6 pairs of shoes. \n\nNext, we find out the total cost of these shoes. Each pair costs $60. We multiply the total number of pairs by the cost per pair: \n6 pairs × $60 per pair = $360.\n\n[Verification] \nTo verify, let's break it down again. John buys 2 pairs for each of his 3 children:\n- For the first child: 2 pairs = $60 × 2 = $120.\n- For the second child: 2 pairs = $60 × 2 = $120.\n- For the third child: 2 pairs = $60 × 2 = $120. \n\nNow, adding these amounts together:\n$120 + $120 + $120 = $360.\n\nBoth methods yield the same total, confirming the calculation is correct.\n\n[Final Answer] The answer is 360 \n#### 360",
+        "I Don't Know"
+    ],
+    "ground_truth_hints": "",
+    "hints_prompt": "Question: John buys 2 pairs of shoes for each of his 3 children.  They cost $60 each.  How much did he pay?\nCould you provide me with the thought process to solve this problem, but please don’t give me the answer or calculation, just the thought process?",
+    "to_explore": [
+        "[reasoning process] \nFirst, we need to determine how many pairs of shoes John bought in total. He has 3 children, and he buys 2 pairs of shoes for each child. Therefore, we calculate the total number of pairs of shoes: \n3 children × 2 pairs per child = 6 pairs of shoes. \n\nNext, we find out the total cost of these shoes. Each pair costs $60. We multiply the total number of pairs by the cost per pair: \n6 pairs × $60 per pair = $360.\n\n[Verification] \nTo verify, let's break it down again. John buys 2 pairs for each of his 3 children:\n- For the first child: 2 pairs = $60 × 2 = $120.\n- For the second child: 2 pairs = $60 × 2 = $120.\n- For the third child: 2 pairs = $60 × 2 = $120. \n\nNow, adding these amounts together:\n$120 + $120 + $120 = $360.\n\nBoth methods yield the same total, confirming the calculation is correct.\n\n[Final Answer] The answer is 360 \n#### 360",
+        "I Don't Know"
+    ],
+    "to_explore_reward": {
+        "[reasoning process] \nFirst, we need to determine how many pairs of shoes John bought in total. He has 3 children, and he buys 2 pairs of shoes for each child. Therefore, we calculate the total number of pairs of shoes: \n3 children × 2 pairs per child = 6 pairs of shoes. \n\nNext, we find out the total cost of these shoes. Each pair costs $60. We multiply the total number of pairs by the cost per pair: \n6 pairs × $60 per pair = $360.\n\n[Verification] \nTo verify, let's break it down again. John buys 2 pairs for each of his 3 children:\n- For the first child: 2 pairs = $60 × 2 = $120.\n- For the second child: 2 pairs = $60 × 2 = $120.\n- For the third child: 2 pairs = $60 × 2 = $120. \n\nNow, adding these amounts together:\n$120 + $120 + $120 = $360.\n\nBoth methods yield the same total, confirming the calculation is correct.\n\n[Final Answer] The answer is 360 \n#### 360": [
+            70.0
+        ],
+        "I Don't Know": [
+            -90.0
+        ]
+    },
+    "hints_bank": {},
+    "history_bank": {
+        "[reasoning process] \nFirst, we need to determine how many pairs of shoes John bought in total. He has 3 children, and he buys 2 pairs of shoes for each child. Therefore, we calculate the total number of pairs of shoes: \n3 children × 2 pairs per child = 6 pairs of shoes. \n\nNext, we find out the total cost of these shoes. Each pair costs $60. We multiply the total number of pairs by the cost per pair: \n6 pairs × $60 per pair = $360.\n\n[Verification] \nTo verify, let's break it down again. John buys 2 pairs for each of his 3 children:\n- For the first child: 2 pairs = $60 × 2 = $120.\n- For the second child: 2 pairs = $60 × 2 = $120.\n- For the third child: 2 pairs = $60 × 2 = $120. \n\nNow, adding these amounts together:\n$120 + $120 + $120 = $360.\n\nBoth methods yield the same total, confirming the calculation is correct.\n\n[Final Answer] The answer is 360 \n#### 360": [
+            "Question: John buys 2 pairs of shoes for each of his 3 children.  They cost $60 each.  How much did he pay?\nThe response should begin with [reasoning process]...[Verification]... and end with \"[Final Answer] The answer is [answer] \\n#### [answer]\"\nLet's think step by step.",
+            "[reasoning process] \nFirst, we need to determine how many pairs of shoes John bought in total. He has 3 children, and he buys 2 pairs of shoes for each child. Therefore, we calculate the total number of pairs of shoes: \n3 children × 2 pairs per child = 6 pairs of shoes. \n\nNext, we find out the total cost of these shoes. Each pair costs $60. We multiply the total number of pairs by the cost per pair: \n6 pairs × $60 per pair = $360.\n\n[Verification] \nTo verify, let's break it down again. John buys 2 pairs for each of his 3 children:\n- For the first child: 2 pairs = $60 × 2 = $120.\n- For the second child: 2 pairs = $60 × 2 = $120.\n- For the third child: 2 pairs = $60 × 2 = $120. \n\nNow, adding these amounts together:\n$120 + $120 + $120 = $360.\n\nBoth methods yield the same total, confirming the calculation is correct.\n\n[Final Answer] The answer is 360 \n#### 360"
+        ],
+        "I Don't Know": [
+            "Question: John buys 2 pairs of shoes for each of his 3 children.  They cost $60 each.  How much did he pay?\nThe response should begin with [reasoning process]...[Verification]... and end with \"[Final Answer] The answer is [answer] \\n#### [answer]\"\nLet's think step by step.",
+            "I Don't Know"
+        ]
+    },
+    "hints_reward_imp_bank": {},
+    "fathers": {
+        "[reasoning process] \nFirst, we need to determine how many pairs of shoes John bought in total. He has 3 children, and he buys 2 pairs of shoes for each child. Therefore, we calculate the total number of pairs of shoes: \n3 children × 2 pairs per child = 6 pairs of shoes. \n\nNext, we find out the total cost of these shoes. Each pair costs $60. We multiply the total number of pairs by the cost per pair: \n6 pairs × $60 per pair = $360.\n\n[Verification] \nTo verify, let's break it down again. John buys 2 pairs for each of his 3 children:\n- For the first child: 2 pairs = $60 × 2 = $120.\n- For the second child: 2 pairs = $60 × 2 = $120.\n- For the third child: 2 pairs = $60 × 2 = $120. \n\nNow, adding these amounts together:\n$120 + $120 + $120 = $360.\n\nBoth methods yield the same total, confirming the calculation is correct.\n\n[Final Answer] The answer is 360 \n#### 360": null,
+        "I Don't Know": null
+    },
+    "childs": {
+        "[reasoning process] \nFirst, we need to determine how many pairs of shoes John bought in total. He has 3 children, and he buys 2 pairs of shoes for each child. Therefore, we calculate the total number of pairs of shoes: \n3 children × 2 pairs per child = 6 pairs of shoes. \n\nNext, we find out the total cost of these shoes. Each pair costs $60. We multiply the total number of pairs by the cost per pair: \n6 pairs × $60 per pair = $360.\n\n[Verification] \nTo verify, let's break it down again. John buys 2 pairs for each of his 3 children:\n- For the first child: 2 pairs = $60 × 2 = $120.\n- For the second child: 2 pairs = $60 × 2 = $120.\n- For the third child: 2 pairs = $60 × 2 = $120. \n\nNow, adding these amounts together:\n$120 + $120 + $120 = $360.\n\nBoth methods yield the same total, confirming the calculation is correct.\n\n[Final Answer] The answer is 360 \n#### 360": [],
+        "I Don't Know": []
+    },
+    "ucb_bank": {},
+    "correct_answers": [
+        "[reasoning process] \nFirst, we need to determine how many pairs of shoes John bought in total. He has 3 children, and he buys 2 pairs of shoes for each child. Therefore, we calculate the total number of pairs of shoes: \n3 children × 2 pairs per child = 6 pairs of shoes. \n\nNext, we find out the total cost of these shoes. Each pair costs $60. We multiply the total number of pairs by the cost per pair: \n6 pairs × $60 per pair = $360.\n\n[Verification] \nTo verify, let's break it down again. John buys 2 pairs for each of his 3 children:\n- For the first child: 2 pairs = $60 × 2 = $120.\n- For the second child: 2 pairs = $60 × 2 = $120.\n- For the third child: 2 pairs = $60 × 2 = $120. \n\nNow, adding these amounts together:\n$120 + $120 + $120 = $360.\n\nBoth methods yield the same total, confirming the calculation is correct.\n\n[Final Answer] The answer is 360 \n#### 360"
+    ]
+}
