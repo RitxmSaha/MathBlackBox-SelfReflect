@@ -367,7 +367,10 @@ if not os.path.exists(f"{DATA_NAME}/jsons"):
 
 if "gsm8k" in DATA_NAME:
     dataset = load_dataset("gsm8k", "main", split="test")
-    dataset = dataset.select(range(120))
+elif 'AIME' in DATA_NAME:
+    dataset = load_dataset("qq8933/AIME_1983_2024",split='train')
+
+dataset = dataset.select(range(120))
 
 # if 'testtime' in DATA_NAME:
 #     if 'gsm8k' in DATA_NAME:
@@ -410,7 +413,7 @@ dataset.shuffle()
 
 
 @retry()
-def generate(prompt, history=[], timeout=150, truncate=True):
+def generate(prompt, history=[], timeout=300, truncate=True):
     if "testtime" in DATA_NAME:
         timeout = 150
     print("awaiting response...")
@@ -445,7 +448,20 @@ def generate(prompt, history=[], timeout=150, truncate=True):
 
 @retry()
 def cal_reward(question, ans):
-    query = f"Question: {question}\nAnswer:{ans}\nAnalyze this Answer Strictly and Critic, point out every flaw for ervery possible imperfect to minus every possible score! You need to be very harsh and mean in calculating grades, and never give full marks to ensure that the marks are authoritative. \nOutput a score between [-100,+100], ig. from -100 to +100. \nResponse format:\n[Analyst]...[Score]..."
+    #query = f"Question: {question}\nAnswer:{ans}\nAnalyze this Answer Strictly and Critic, point out every flaw for ervery possible imperfect to minus every possible score! You need to be very harsh and mean in calculating grades, and never give full marks to ensure that the marks are authoritative. \nOutput a score between [-100,+100], ig. from -100 to +100. \nResponse format:\n[Analyst]...[Score]..."
+    query = f"""
+    Question: {question}\nAnswer:{ans}\n Strictly critic and analyze the answer to the provided question. Point out every logical flaw that was made in the reasoning process that resulted in the final answer being incorrect under [Analysis]. Output a score between -100 to +100 that represents the quality of this answer based on the logical errors made in the reasoning process under [Score].
+    Use the following rubric to assign scores:
+    +75 to +100:
+    No logical errors were made, the answer correctly interpreted the question and took the correct approach to solving the problem.
+    +0 to +74:
+    Minor logical errors made. Mistakes that have been made can be corrected during the revision process.
+    -74 to -1:
+    Major logical errors made. Mistakes that have been made can be corrected during the revision process.
+    -100 to -75:
+    Many major logical errors were made. Incorrect approach taken or misinterpreted question. 
+    Use the following format for your response\nResponse format:\n[Analyst]...[Score]..."""
+
     ret = generate(query)
     score = ret[0].split("Score")[-1]
     scores = pattern.findall(score)
@@ -461,7 +477,7 @@ def cal_reward(question, ans):
 @retry()
 def get_weak_answer(question, new_len=0, ans_format=""):
     query = f"Question: {question}\nThe response should begin with [reasoning process]...[Verification]... and end with {ans_format}\nLet's think step by step."
-    return generate(query, timeout=90)
+    return generate(query, timeout=300)
 
 
 def get_weak_hints(
@@ -473,21 +489,23 @@ def get_weak_hints(
     alreadygood=False,
     ans_format="",
 ):
-    query = f"Question: {question}\nSince we have a weak Answer, could you provide me with a relection or feedback to correct this answer better? Analyze this Answer Strictly and Critic, point out every flaw for ervery possible imperfect to minus every possible score!\nLet's think step by step."
+    #ORIGINAL# query = f"Question: {question}\nSince we have a weak Answer, could you provide me with a relection or feedback to correct this answer better? Analyze this Answer Strictly and Critic, point out every flaw for ervery possible imperfect to minus every possible score!\nLet's think step by step."
+    query = f"Question: {question}\nAnalyze the answer to the provided question rigorously and critically. Identify every logical flaw or misstep in the reasoning process that contributed to the answer being suboptimal. Highlight areas where the reasoning can be improved, ensuring each issue is clearly explained. Provide actionable hints and suggestions to refine and improve the answer. Address all aspects of the reasoning process step-by-step."
     return generate(query, history)
 
 
 def get_better_answer(
     question, weak_answer, hint, new_len=0, history=[], ans_format=""
 ):
-    query = f"Question: {question}\nPlease refine the your answer according to your Reflection or Feedback. The response should begin with [reasoning process]...[Verification]... and end with end with {ans_format}\nLet's think step by step."
+    #ORIGINAL# query = f"Question: {question}\nPlease refine the your answer according to your Reflection or Feedback. The response should begin with [reasoning process]...[Verification]... and end with end with {ans_format}\nLet's think step by step."
+    query = f"Question: {question}\nPlease refine your answer according to the feedback provided. The response should begin with [reasoning process]...[Verification]... and end with end with {ans_format}\nLet's think step by step."
     return generate(query, history)
 
 
 def get_gt_hints(question, ground_truth, new_len=0):
-    query = f"Question: {question}\nGround Truth:{ground_truth}\nAccording to ground truth answer we have, Could you descript the thought process of ground truth answer, please don’t give me the answer, just the thought process?"
-    return generate(query)
-
+    #ORIGINAL#query = f"Question: {question}\nGround Truth:{ground_truth}\nAccording to ground truth answer we have, Could you descript the thought process of ground truth answer, please don’t give me the answer, just the thought process?"
+    #return generate(query)
+    raise NotImplementedError
 
 datas = []
 pattern = re.compile(r"\-?\d+\.\d+|\-?\d+")
